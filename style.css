@@ -1,0 +1,117 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.3rem;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+nav{
+    background-color: rgb(63, 34, 13);
+    color: white;
+    /* margin: auto; */
+    
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    /* justifu  */
+    justify-content: space-around;    
+    /* padding: auto; */
+    align-self: auto;
+
+
+     
+
+}
+nav ul li{
+    list-style-type: none;
+}
+
+
+/* carousel styling  */
+
+/* carousel positing  */
+.carousel{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden    ;
+}
+/* styles for the slider  */
+.slides{
+    display: flex;
+    transition: transform 0.5s ease;
+}
+/* for the body  */
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+}
+.slide1{
+    background-color: blueviolet;
+
+}
+.slide2{
+    background-color: violet;
+}
+
+.slide3{
+    background-color: chocolate;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+input#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+input#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+.controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.control {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    background-color: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control:hover {
+    background-color: gray;
+}
+
+input#slide1:checked + .controls label[for="slide1"],
+input#slide2:checked + .controls label[for="slide2"],
+input#slide3:checked + .controls label[for="slide3"] {
+    background-color: darkgray;
+}
+
+
+
+
+
+/* card css  */
+
